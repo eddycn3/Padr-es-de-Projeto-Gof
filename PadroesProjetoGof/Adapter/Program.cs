@@ -1,16 +1,22 @@
 ﻿using Adapter;
 
-IGrafico grafico = new GraficoAdapter();
+class Program
+{
+    static void Main(string[] args)
+    {
+        IGrafico grafico = new GraficoAdapter();
 
-grafico.Titulo = "Gerador de Graficos";
+        grafico.Titulo = "Gerador de Graficos";
 
-List<string> xvalores = new List<string>();
-xvalores.Add("Seg");
-xvalores.Add("Ter");
+        List<string> xvalores = new List<string>();
+        xvalores.Add("Seg");
+        xvalores.Add("Ter");
 
-List<int> yvalores = new List<int>();
-yvalores.Add(10);
-yvalores.Add(20);
+        List<int> yvalores = new List<int>();
+        yvalores.Add(10);
+        yvalores.Add(20);
 
-grafico.GerarGrafico(grafico.Titulo,xvalores, yvalores);
-Console.ReadKey();
+        grafico.GerarGrafico(grafico.Titulo, xvalores, yvalores);
+        Console.ReadKey();
+    }
+}
